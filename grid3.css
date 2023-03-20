@@ -11,12 +11,14 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15vw 70vw 15vw;
+    grid-template-areas: "m h h" "m c c" "m f f";
+    grid-gap: 10px;
 }
 
 header, nav, article, footer {
     font-size: 2rem;
     padding: 20px;
-    border: 5px solid rgb(4, 4, 79);
+    border: 5px solid rgb(108, 108, 190);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,20 +26,20 @@ header, nav, article, footer {
 
 header {
     background-color: rgb(163, 163, 255);
-    grid-column: span 3;
+    grid-area: h;
 }
 
 nav {
-    background-color: violet;
-    grid-column:  span 1;
+    background-color: rgb(100, 79, 160);
+    grid-area: m;
 }
 
 article {
-    background-color: pink;
-    grid-column: span 2;
+    background-color: rgb(135, 209, 214);
+    grid-area: c;
 }
 
 footer {
     background-color: rgb(185, 112, 252);
-    grid-column: span 3;
+    grid-area: f;
 }
